@@ -1,30 +1,6 @@
 
 # application properties
 app:
-  datasource:
-    name: asd
-    host: 127.0.0.1:3306
-    username: root
-    password: 123456
-spring:
-  # 数据库配置
-  datasource:
-    name: ${app.datasource.name}
-    url: jdbc:mysql://${app.datasource.host}/${app.datasource.name}?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
-    username: ${app.datasource.username}
-    #password: ${app.datasource.password}
-    type: org.apache.commons.dbcp2.BasicDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-
-    dbcp2:
-      # encrypt password
-      filters: config,stat,wall,log4j
-      use-global-data-source-stat: true
-      initial-size: 20
-      max-idle: 50
-      min-idle: 20
-      max-total: 100
-
   http:
     encoding.charset: UTF-8
     encoding.enable: true
@@ -58,6 +34,3 @@ server:
     io-threads: 2
     worker-threads: 100
   port: 8088
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  typeAliasesPackage: com.misnearzhangarzhang.pojo

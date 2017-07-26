@@ -29,7 +29,7 @@ public class OrderServiceConsu {
         }
 
         public  void hello(String name){
-            proto.Request request = proto.Request .newBuilder().setData("hello").build();
+            proto.Request request = proto.Request .newBuilder().setData(name).build();
             proto.Response response = blockingStub.getUserDate(request);
             System.out.println(response.getStatus());
 
