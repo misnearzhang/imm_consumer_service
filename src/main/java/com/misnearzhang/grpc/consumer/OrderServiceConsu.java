@@ -35,7 +35,7 @@ public class OrderServiceConsu {
         public  String hello(String name){
             proto.Request request = proto.Request .newBuilder().setData(name).build();
             proto.Response response = blockingStub.getUserDate(request);
-            return response.getStatus()== proto.status.OK?"OK":"err";
+            return response.getStatus()== proto.status.OK?response.getData():"err";
 
         }
 
