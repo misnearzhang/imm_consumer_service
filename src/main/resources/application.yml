@@ -33,4 +33,12 @@ server:
   undertow:
     io-threads: 2
     worker-threads: 100
-  port: 8088
+  port: 8089
+
+grpc:
+  client:
+    grpc-server:
+      server-host: localhost
+      serverPort: 3000
+      enable-keep-alive: true
+      keep-alive-delay: 5 # seconds

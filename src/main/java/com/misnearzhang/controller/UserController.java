@@ -1,7 +1,6 @@
 package com.misnearzhang.controller;
 
-import com.misnearzhang.pojo.User;
-import com.misnearzhang.service.UserService;
+import com.misnearzhang.grpc.consumer.OrderServiceConsu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,11 +12,13 @@ import java.util.List;
  */
 @RestController
 public class UserController {
-    @Autowired
-    private UserService userService;
 
-    @RequestMapping("userInfo")
-    public List<User> getUserInfo(){
-        return null;
+    @Autowired
+    OrderServiceConsu orderServiceConsu;
+
+
+    @RequestMapping("/")
+    public Object get(){
+        return orderServiceConsu.hello("nihk");
     }
 }
