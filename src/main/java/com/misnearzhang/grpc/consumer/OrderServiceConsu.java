@@ -1,8 +1,7 @@
 package com.misnearzhang.grpc.consumer;
 
-import com.misnearzhang.grpc.config.annotation.GRpcClient;
-import grpcstart.RpcServiceGrpc;
-import grpcstart.proto;
+import com.misnearzhang.common.grpcdl.RpcServiceGrpc;
+import com.misnearzhang.common.grpcdl.proto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
