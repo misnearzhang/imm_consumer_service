@@ -14,36 +14,17 @@ import org.springframework.stereotype.Service;
 public class OrderServiceConsu {
     @Autowired
     private RpcServiceGrpc.RpcServiceBlockingStub blockingStub;
-        /*private final ManagedChannel channel;
-        private final RpcServiceGrpc.RpcServiceBlockingStub blockingStub;
 
-
-        public OrderServiceConsu(String host,int port){
-            channel = ManagedChannelBuilder.forAddress(host,port)
-                    .usePlaintext(true)
-                    .build();
-
-            blockingStub = RpcServiceGrpc.newBlockingStub(channel);
-        }
-
-
-        public void shutdown() throws InterruptedException {
-            channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
-        }*/
-
-        public  String hello(String name){
+        public  String getUserInfo(String name){
             proto.Request request = proto.Request .newBuilder().setData(name).build();
             proto.Response response = blockingStub.getUserDate(request);
             return response.getStatus()== proto.status.OK?response.getData():"err";
 
         }
 
-        /*public static void main(String[] args) throws InterruptedException {
-            OrderServiceConsu client = new OrderServiceConsu("127.0.0.1",3000);
-            for(int i=0;i<5;i++){
-                client.hello("xcnana  这里是客户端调用请求:"+i);
-            }
-
-
-        }*/
+        public String makeOrder(){
+            proto.Request request =  proto.Request.newBuilder().setId(1).setTime(System.currentTimeMillis()).setData("zhanglong grpc request").build();
+            proto.Response response = blockingStub.makeOrder(request);
+            return "successful!";
+        }
     }

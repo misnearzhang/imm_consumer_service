@@ -19,6 +19,11 @@ public class UserController {
 
     @RequestMapping("/")
     public Object get(){
-        return orderServiceConsu.hello("nihk");
+        return orderServiceConsu.getUserInfo("nihk");
+    }
+
+    @RequestMapping("/make-order")
+    public Object makeOrder(){
+        return orderServiceConsu.makeOrder();
     }
 }

@@ -6,14 +6,7 @@ import io.grpc.ManagedChannel;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-/**
- * <p>
- *  rpc server连接配置
- * </p>
- *
- * @author wangxiaohu
- * @since 2017-05-08
- */
+
 
 @Configuration
 @EnableAutoConfiguration
