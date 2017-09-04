@@ -42,3 +42,5 @@ grpc:
       serverPort: 3000
       enable-keep-alive: true
       keep-alive-delay: 5 # seconds
+
+spring.profiles.active: test,localhost

@@ -20,7 +20,7 @@ public class UserController {
     OrderServiceConsu orderServiceConsu;
 
     @ApiOperation(value = "index",notes = "一个测试的东西")
-    @RequestMapping("/")
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public Object get(){
         return orderServiceConsu.getUserInfo("nihk");
     }
