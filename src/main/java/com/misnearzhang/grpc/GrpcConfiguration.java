@@ -1,7 +1,7 @@
-package com.misnearzhang.grpc.config;
+package com.misnearzhang.grpc;
 
-import com.misnearzhang.common.grpcdl.RpcServiceGrpc;
-import com.misnearzhang.grpc.config.annotation.GRpcClient;
+import com.misnearzhang.protoc.RpcServiceGrpc;
+import com.misnearzhang.config.annotation.GRpcClient;
 import io.grpc.ManagedChannel;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;

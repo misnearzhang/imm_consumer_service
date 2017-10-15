@@ -8,8 +8,18 @@ public class User {
 
     private String password;
 
+    private String maven;
+
 
     public User() {
+    }
+
+    public String getMaven() {
+        return maven;
+    }
+
+    public void setMaven(String maven) {
+        this.maven = maven;
     }
 
     public Long getId() {

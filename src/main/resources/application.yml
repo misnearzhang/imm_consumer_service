@@ -28,7 +28,7 @@ logging:
 cors:
   mappings: /**
   allowedOrigins:
-#undertow config optimize
+#undertow com.misnearzhang.config optimize
 server:
   undertow:
     io-threads: 2
@@ -44,3 +44,15 @@ grpc:
       keep-alive-delay: 5 # seconds
 
 spring.profiles.active: test,localhost
+spring:
+  devtools:
+    livereload:
+      enabled: false
+    restart:
+      trigger-file: .java
+
+
+
+
+
+
